@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>DevKrutiTech</title>
-  <meta name="title" content="DevKrutiTech">
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DevKrutiTech</title>
+<meta name="title" content="DevKrutiTech">
 <meta name="description" content="We are an India based business. We provide services of Website Development, Application Development, Digital Marketing and Graphics Designing to all types of firms.">
 <meta name="keywords" content="devkrutitech,DEVKRUTITECH,web development,app development,graphic design,digital marketing,webdevelopment,appdevelopment,it company,it company in vadodara,app dvelopment company in vadodara,web development company in vadodara,graphic designer in vadodara,digital marketing company in vadodara,digital marketing company in gujarat,digital marketing company in india,It consultancy,it consultancy in vadodara,it consultancy in gujarat,it consultancy in India">
 <meta name="robots" content="index, follow">
@@ -36,6 +35,23 @@
 
   <!--  Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  window.addEventListener('load', () => {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: false,
+        mirror: false
+      })
+    });
+</script>
+
 
 
 </head>
@@ -358,7 +374,35 @@
 
       </div>
     </section><!-- End Portfolio Section -->
-
+    <section id="clients">
+      <div class="container" data-aos="zoom-in">
+  
+        <div class="section-title">
+          <span>Portfolio</span>
+          <h2>Technologies We Work On</h2>
+          
+        </div>
+  
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+        
+            <div class="swiper-slide"><img src="assets/img/tech-stack/1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/tech-stack/2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/tech-stack/3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/tech-stack/4.png" class="img-fluid" alt=""></div>
+     
+            <div class="swiper-slide"><img src="assets/img/tech-stack/5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/tech-stack/6.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img/tech-stack/laravel.png" class="img-fluid" alt=""></div>
+           
+            
+  
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+  
+      </div>
+    </section><!-- End Our Clients Section -->
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
@@ -447,6 +491,8 @@
       </div>
     </section><!-- End Contact Section -->
 
+   
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -521,6 +567,41 @@
  <script src="assets/vendor/aos/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script>
+    new Swiper('.clients-slider', {
+  speed: 400,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false
+  },
+  slidesPerView: 'auto',
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    }
+  }
+});
+
   </script>
 
   <!-- Template Main JS File -->
